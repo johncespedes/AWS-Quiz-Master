@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Quiz Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-flex">
+                <div class="header-img-box">
+                    <img src="imagenes/cerebro.png" alt="cerebro" class="header-img-izq">
+                </div>
+                <h1>AWS Quiz Master</h1>
+                <div class="header-img-box">
+                    <img src="imagenes/logo_morris_aws_v1_transparent1.png" alt="decorativo" class="header-img-der">
+                </div>
+            </div>
+            <p class="subtitulo">AWS RE/START</p>
+        </header>
+        <div id="welcome-screen" class="screen">
+            <h2>¡Bienvenido al mundo de AWS!</h2>
+            <p class="mensaje-bienvenida">Mide tus conocimientos sobre Amazon Web Services</p>
+            <button onclick="startQuiz()" class="start-button">
+                Comenzar Quiz
+                <img src="imagenes/tiro_con_arco1.png" alt="diana" style="height: 1.8em; vertical-align: middle; margin-left: 0.5em;">
+            </button>
+        </div>
+        <div id="quiz-screen" class="screen hidden">
+            <div class="progress">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <span id="progress-text">Pregunta 1 de 5</span>
+            </div>
+            <div class="question-card">
+                <h2 id="question-text"></h2>
+                <div id="options-container"></div>
+            </div>
+            <div class="quiz-controls">
+                <button id="next-button" onclick="nextQuestion()" class="hidden">
+                    Siguiente
+                    <img src="imagenes/un _solo_sentido.png" alt="siguiente" style="height: 4.2em; vertical-align: middle; margin-left: 2.0em;">
+                </button>
+            </div>
+        </div>
+        <div id="results-screen" class="screen hidden">
+            <div class="results-card">
+                <h2>
+                    <img src="imagenes/celebration_loca.png" alt="celebración" style="height: 3.0em; vertical-align: middle; margin-right: 1.0em;">
+                    ¡Quiz Completado!
+                </h2>
+                <div class="score-circle">
+                    <span id="score-text">0/5</span>
+                </div>
+                <p id="score-message"></p>
+                <div class="results-actions">
+                    <button onclick="restartQuiz()" class="restart-button">
+                        Volver a intentar
+                        <img src="imagenes/retorno1.png" alt="volver a intentar" style="height: 1.8em; vertical-align: middle; margin-left: 0.8em;">
+                    </button>
+                    <button onclick="shareScore()" class="share-button">
+                        Compartir resultado
+                        <img src="imagenes/correo2.png" alt="compartir resultado" style="height: 4.0em; vertical-align: middle; margin-left: 2.5em;">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Creado por: <strong>[John y Claudia]</strong> | Proyecto AWS Re/Start 
+            <img src="imagenes/nintendo.png" alt="nintendo" style="height: 4.5em; vertical-align: middle; margin-left: 3.5em;">
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
