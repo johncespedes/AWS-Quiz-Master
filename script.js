@@ -4,7 +4,7 @@ let score = 0;
 let selectedAnswer = null;
 let quizCompleted = false;
 let timerInterval = null;
-let timerSeconds = 10;
+let timerSeconds = 15;
 // ===== BASE DE DATOS DE PREGUNTAS =====
 const questions = [
     {
@@ -130,7 +130,7 @@ function displayQuestion() {
 }
 function iniciarTemporizador() {
     clearInterval(timerInterval);
-    timerSeconds = 10;
+    timerSeconds = 15;
     const timerDisplay = document.getElementById('timer');
     timerDisplay.classList.remove('tiempo-agotado');
     timerDisplay.innerHTML = `<span class="timer-icon">⏰</span> <span class="timer-text">${timerSeconds}s</span>`;
