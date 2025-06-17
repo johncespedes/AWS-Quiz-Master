@@ -41,7 +41,7 @@ const questions = [
         explanation: "Amazon Route 53."
     },
     {
-        question: "¿Para qué se usa AWS Lambda?",
+        question: "¿Cuál de los siguientes modelos de computación en nube incluye el uso de Amazon EC2?",
         options: [
             "Iaas y SaaS",
             "IaaS", 
