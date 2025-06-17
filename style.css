@@ -438,3 +438,32 @@ footer {
     0% { transform: translateY(0px) translateX(0px); }
     100% { transform: translateY(-100vh) translateX(50px); }
 }
+#timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    margin-bottom: 10px;
+    min-height: 5.5em;
+}
+.timer-icon {
+    font-size: 2.8rem; /* Tamaño del icono del reloj */
+    line-height: 1;
+}
+.timer-text {
+    font-size: 2.2rem; /* Tamaño del número del temporizador */
+    color: #f9f8f6;
+    font-weight: bold;
+}
+.timer-agotado {
+    font-size: 1.7rem; /* Tamaño del texto "¡Tiempo agotado!" */
+    color: #F56565;
+    font-weight: bold;
+}
+#timer.tiempo-agotado .timer-icon {
+    font-size: 3rem; /* Tamaño del icono cuando se agota el tiempo */
+}
+#timer.tiempo-agotado .timer-agotado {
+    font-size: 2.2rem; /* Tamaño del texto cuando se agota el tiempo */
+    color: #fbf9f9;
+}

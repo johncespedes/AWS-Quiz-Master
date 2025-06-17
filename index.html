@@ -23,7 +23,7 @@
         <div id="welcome-screen" class="screen">
             <h2>¡Bienvenido al mundo de AWS!</h2>
             <p class="mensaje-bienvenida">Mide tus conocimientos sobre Amazon Web Services</p>
-            <button onclick="startQuiz()" class="start-button">
+            <button onclick="reproducirInicio();startQuiz()" class="start-button">
                 Comenzar Quiz
                 <img src="imagenes/tiro_con_arco1.png" alt="diana" style="height: 1.8em; vertical-align: middle; margin-left: 0.5em;">
             </button>
@@ -37,7 +37,8 @@
             </div>
             <div class="question-card">
                 <h2 id="question-text"></h2>
-                <div id="options-container"></div>
+            <div id="timer"></div>
+            <div id="options-container"></div>
             </div>
             <div class="quiz-controls">
                 <button id="next-button" onclick="nextQuestion()" class="hidden">
@@ -57,11 +58,11 @@
                 </div>
                 <p id="score-message"></p>
                 <div class="results-actions">
-                    <button onclick="restartQuiz()" class="restart-button">
+                    <button onclick="reproducirVolverIntentar();restartQuiz()" class="restart-button">
                         Volver a intentar
-                        <img src="imagenes/retorno1.png" alt="volver a intentar" style="height: 1.8em; vertical-align: middle; margin-left: 0.8em;">
+                    <img src="imagenes/retorno1.png" alt="volver a intentar" style="height: 1.8em; vertical-align: middle; margin-left: 0.8em;">
                     </button>
-                    <button onclick="shareScore()" class="share-button">
+                    <button onclick="reproducirCompartir();shareScore()" class="share-button">
                         Compartir resultado
                         <img src="imagenes/correo2.png" alt="compartir resultado" style="height: 4.0em; vertical-align: middle; margin-left: 2.5em;">
                     </button>
@@ -75,6 +76,19 @@
             <img src="imagenes/nintendo.png" alt="nintendo" style="height: 4.5em; vertical-align: middle; margin-left: 3.5em;">
         </p>
     </footer>
+    <audio id="sonido-acierto" src="sonidos/acierto.mp3"></audio>
+    <audio id="sonido-incorrecto" src="sonidos/incorrecto.mp3"></audio>
+    <audio id="sonido-pop" src="sonidos/pop.mp3"></audio>
+    <audio id="sonido-inicio2" src="sonidos/inicio2.mp3"></audio>
+    <audio id="sonido-boton-rapido" src="sonidos/boton_rapido.mp3"></audio>
+    <audio id="sonido-excelente" src="sonidos/nivel_superado2.mp3"></audio>
+    <audio id="sonido-bienhecho" src="sonidos/nivel_superado3.mp3"></audio>
+    <audio id="sonido-nomaldel" src="sonidos/nivel_superado4.mp3"></audio>
+    <audio id="sonido-repasar" src="sonidos/no-no-no.mp3"></audio>
+    <audio id="sonido-volver-intentar" src="sonidos/inicio1.mp3"></audio>
+    <audio id="sonido-compartir" src="sonidos/acierto2.mp3"></audio>
+    <audio id="sonido-temporizador" src="sonidos/temporizador1.1.mp3"></audio>
+    <audio id="sonido-fondo" src="sonidos/fondo_ambiental.mp3" loop></audio>
     <script src="script.js"></script>
 </body>
 </html>
